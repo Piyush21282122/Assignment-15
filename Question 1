@@ -1,0 +1,33 @@
+
+#include<stdio.h>
+int greatest_number(int *,int);
+int main()
+{
+    int n,number;
+
+    printf("Enter size of an Array :\n");
+    scanf("%d",&n);
+
+    int num[n];
+    number=greatest_number(num,n);
+    printf("Greatest Number is %d",number);
+    return 0;
+}
+
+int greatest_number(int num[],int size)
+{
+    
+    int max=-1;
+    int i;
+
+    printf("Enter values for array :\n");
+    for(i=0;i<size;i++)
+       scanf("%d",&num[i]);
+
+    for(i=0;i<size;i++)
+    {
+        if(max < num[i])
+           max=num[i];
+    }
+    return max;
+}
